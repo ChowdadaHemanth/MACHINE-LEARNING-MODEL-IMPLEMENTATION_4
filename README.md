@@ -8,7 +8,7 @@ ID: CT08HWV
 
 Domain: Python Programming
 
-Duration: December 2024 to January 2025
+Duration: December 30th,2024 to January 30th,2025
 
 Mentor: N.Santosh
 
