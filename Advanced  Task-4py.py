@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -5,7 +7,10 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 # Load the dataset
-data = pd.read_csv("C:\\Users\\navee\\Downloads\\spam_or_not_spam.csv.zip", encoding='latin-1')
+dataset_path = os.getenv('SPAM_DATASET_PATH')
+if not dataset_path:
+    raise RuntimeError('Set SPAM_DATASET_PATH to the spam dataset file before running the script.')
+data = pd.read_csv(dataset_path, encoding='latin-1')
 
 # Check the dataset columns
 print(data.columns)
